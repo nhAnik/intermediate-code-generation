@@ -9,7 +9,6 @@
 #include<algorithm>
 #include "SymbolTable.cpp"
 
- 
 #define YYSTYPE symbolInfo*
 
 using namespace std;
@@ -32,7 +31,6 @@ symbolInfo *tempArg;
 
 int befIncr,befDecr;
 
-
 vector<string> paramList;
 vector<string> paramType;
 
@@ -43,16 +41,12 @@ int argCnt,parIdx;
 vector<symbolInfo*> declList;
 
 int tempIdx=-1;
- 
-
 string type;
 
 symbolTable *st = new symbolTable();
 int line_count=1;
 int error_cnt=0;
-
 bool voidError = false;
-
 
 bool isInt(float a){
 	int x=(int)a;
@@ -62,7 +56,6 @@ bool isInt(float a){
 	return false;
 }
 
-
 void yyerror(char *s)
 {
 	 
@@ -71,10 +64,8 @@ void yyerror(char *s)
 	return;
 }
 
-
 int labelCount=0;
 int tempCount=0;
-
 
 char *newLabel()
 {
@@ -97,7 +88,6 @@ char *newTemp()
 	strcat(t,b);
 	return t;
 }
-
 
 string mkstr(string s,string s1){ 
 	string prod = "";
@@ -1274,4 +1264,3 @@ int main(int argc,char *argv[])
  
 	return 0;
 }
-
