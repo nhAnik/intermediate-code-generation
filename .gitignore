@@ -1,0 +1,7 @@
+*.c
+*.h
+*.output
+*.asm
+*.txt
+*.out
+*.o
